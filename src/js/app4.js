@@ -9,20 +9,19 @@ inputForm.addEventListener('submit', e => {
 
 
 lettersInput.addEventListener('input', (e) => {
-  let letter = e.target.value.split('');
-  
-  console.log(letter);
+  let letters = e.target.value.split('');
+  // let lastLetter = letters[letters.length-1];
+  console.log(letters);
   //myArray.push(lettersInput.value)
   // console.log(letter);
 
-  // if(letter === null){
-  //   console.log(signOutput.removeChild(signOutput.childNodes[1]));
-  //   //signOutput.innerHTML = ``;
-  // } else{
-  // signOutput.innerHTML += `
-  //   <img src="./img/sign${letter}.png" class="img-fluid">
-  // `;
-  // }
+
+  signOutput.innerHTML = '';
+  for (let i = 0; i < letters.length; i++) {
+    signOutput.innerHTML += `
+      <img src="./img/sign${letters[i]}.png" class="img-fluid">
+      `;
+  }
 
   //console.log(letter);
   // for(i = 0; i < letter.length; i++){
